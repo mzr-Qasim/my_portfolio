@@ -15,6 +15,8 @@ class Home(models.Model):
     linkedin_link = models.CharField(max_length=300,null=True,blank=True)
     github_link = models.CharField(max_length=300,null=True,blank=True)
     instagram_link = models.CharField(max_length=300,null=True,blank=True)
+    page_title = models.CharField(max_length=50,null=True,blank=True)
+
 
 
 
