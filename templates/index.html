@@ -67,7 +67,7 @@
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li> -->
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -680,33 +680,33 @@
                 <div class="col-12 col-lg-5">
                   <div class="contact-info">
                     <h4 class="content-title">Contact Info</h4>
-                    <p class="info-description">Always available for freelance work if the right project comes along, Feel free to contact me!</p>
+                    <p class="info-description" >{% for data in Contact_Data %} {{ data.contact_info }} {% endfor %} </p>
                     <ul class="list-unstyled list-info">
                       <li>
                         <div class="media align-items-center"><span class="info-icon"><i class="icon ion-logo-ionic"></i></span>
                           <div class="media-body info-details">
-                            <h6 class="info-type">Name</h6><span class="info-value">Emma Smith</span>
+                            <h6 class="info-type">Name</h6><span class="info-value">{% for name in Home_Page_Data %} {{name.first_name}} {{name.last_name}} {% endfor %}</span>
                           </div>
                         </div>
                       </li>
                       <li>
                         <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-map"></i></span>
                           <div class="media-body info-details">
-                            <h6 class="info-type">Location</h6><span class="info-value">4155 Mann Island, Liverpool, United Kingdom.</span>
+                            <h6 class="info-type">Location</h6><span class="info-value">{% for data in Contact_Data %} {{data.location}} {% endfor %}</span>
                           </div>
                         </div>
                       </li>
                       <li>
                         <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-call"></i></span>
                           <div class="media-body info-details">
-                            <h6 class="info-type">Call Me</h6><span class="info-value"><a href="tel:+441632967704">+44 1632 967704</a></span>
+                            <h6 class="info-type">Call Me</h6><span class="info-value">{% for data in Contact_Data %}<a href="tel:{{data.phone_number}}">{{data.phone_number}}</a>{% endfor %}</span>
                           </div>
                         </div>
                       </li>
                       <li>
                         <div class="media align-items-center"><span class="info-icon"><i class="icon ion-md-send"></i></span>
                           <div class="media-body info-details">
-                            <h6 class="info-type">Email Me</h6><span class="info-value"><a href="mailto:emma@example.com">emma@example.com</a></span>
+                            <h6 class="info-type">Email Me</h6><span class="info-value">{% for data in About_Section_Data %}<a href="mailto:{{data.email}}">{{data.email}}</a>{% endfor %}</span>
                           </div>
                         </div>
                       </li>

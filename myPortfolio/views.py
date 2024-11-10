@@ -4,6 +4,7 @@ from About.models import About
 from Skills.models import Skills
 from Services.models import Services
 from Portfolio.models import Portfolio, Category
+from Contact.models import Contact
 
 def homePage(request):
     Home_Page = Home.objects.all()
@@ -12,6 +13,7 @@ def homePage(request):
     Services_Section = Services.objects.all()
     Portfolio_Section = Portfolio.objects.all()
     Categories = Category.objects.all()
+    Contact_Section = Contact.objects.all()
 
     Data= {
     "Home_Page_Data": Home_Page,
@@ -20,6 +22,7 @@ def homePage(request):
     "Services_Data": Services_Section,
     "Portfolio_Data":Portfolio_Section ,
     "Categories_Data": Categories,
+    "Contact_Data": Contact_Section,
 
     
        
