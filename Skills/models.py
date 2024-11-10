@@ -10,16 +10,37 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Skills(models.Model):
-    left_side_skill_name = models.CharField(max_length=30,null=True,blank=True)
+    skill_1_name = models.CharField(max_length=30,null=True,blank=True)
     
-    left_side_skill_percentage = models.PositiveSmallIntegerField(
-        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True
+    skill_1_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
     )
-    right_side_skill_name = models.CharField(max_length=30,null=True,blank=True)
+    skill_2_name = models.CharField(max_length=30,null=True,blank=True)
     
-    right_side_skill_percentage = models.PositiveSmallIntegerField(
-        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True
+    skill_2_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
     )
+    skill_3_name = models.CharField(max_length=30,null=True,blank=True)
+    
+    skill_3_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
+    )
+    skill_4_name = models.CharField(max_length=30,null=True,blank=True)
+    
+    skill_4_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
+    )
+    skill_5_name = models.CharField(max_length=30,null=True,blank=True)
+    
+    skill_5_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
+    )
+    skill_6_name = models.CharField(max_length=30,null=True,blank=True)
+    
+    skill_6_percentage = models.PositiveSmallIntegerField(
+        validators=[MinValueValidator(10), MaxValueValidator(100)],null=True,blank=True
+    )
+
 
 
     class Meta:

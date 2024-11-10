@@ -428,40 +428,52 @@
               </div>
               <div class="row">
                 <div class="col-12 col-md-6">
-                  <div class="single-skill" data-percentage="95">
-                    <div class="skill-info"><span class="skill-name">HTML/CSS</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_1_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_1_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="80">
-                    <div class="skill-info"><span class="skill-name">Web Design</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_3_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_3_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="90">
-                    <div class="skill-info"><span class="skill-name">JavaScript</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_5_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_5_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-md-6">
-                  <div class="single-skill" data-percentage="90">
-                    <div class="skill-info"><span class="skill-name">React JS</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_2_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_2_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="95">
-                    <div class="skill-info"><span class="skill-name">Express.js</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_4_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_4_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
-                  <div class="single-skill" data-percentage="80">
-                    <div class="skill-info"><span class="skill-name">TypeScript</span><span class="skill-percentage"></span></div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_6_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_6_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
