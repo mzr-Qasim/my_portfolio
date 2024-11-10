@@ -437,24 +437,6 @@
                     </div>
                   </div>
                   {% for skill in Skills_Data %}
-                  <div class="single-skill" data-percentage="{{skill.skill_3_percentage}}">
-                  {% endfor %}
-                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_3_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
-                    <div class="progress skill-progress">
-                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                  {% for skill in Skills_Data %}
-                  <div class="single-skill" data-percentage="{{skill.skill_5_percentage}}">
-                  {% endfor %}
-                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_5_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
-                    <div class="progress skill-progress">
-                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-md-6">
-                  {% for skill in Skills_Data %}
                   <div class="single-skill" data-percentage="{{skill.skill_2_percentage}}">
                   {% endfor %}
                     <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_2_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
@@ -463,9 +445,27 @@
                     </div>
                   </div>
                   {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_3_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_3_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  {% for skill in Skills_Data %}
                   <div class="single-skill" data-percentage="{{skill.skill_4_percentage}}">
                   {% endfor %}
                     <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_4_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
+                    <div class="progress skill-progress">
+                      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                  </div>
+                  {% for skill in Skills_Data %}
+                  <div class="single-skill" data-percentage="{{skill.skill_5_percentage}}">
+                  {% endfor %}
+                    <div class="skill-info"><span class="skill-name">{% for skill in Skills_Data %} {{skill.skill_5_name}} {% endfor %}</span><span class="skill-percentage"></span></div>
                     <div class="progress skill-progress">
                       <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -526,62 +526,26 @@
                 <div class="col-12">
                   <ul class="list-inline filter-control" role="group" aria-label="Filter Control">
                     <li class="list-inline-item tab-active" data-filter="*">All</li>
-                    <li class="list-inline-item" data-filter=".brand">Brand</li>
-                    <li class="list-inline-item" data-filter=".design">Design</li>
-                    <li class="list-inline-item" data-filter=".photos">Photos</li>
+                    {% for category in Categories_Data %}
+                    <li class="list-inline-item" data-filter=".{{category.slug}}">{{category.name}}</li>
+                    {% endfor %}
+
                   </ul>
                 </div>
               </div>
               <!-- Thumbnail list-->
               <div class="portfolio-grid row">
                 <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item" href="img/item-1.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-1.jpg">
+                 {% for item in Portfolio_Data %}
+                <div class="single-item col-6 col-lg-4 {% for category in item.categories.all %}{{ category.slug }} {% endfor %}"><a class="portfolio-item" href="{{item.image.url}}" data-lightbox>
+                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="{{item.image.url}}">
                       <div class="item-content">
-                        <h6 class="content-title">Label Tag Mockup</h6><span class="content-more">More Info</span>
+                        <h6 class="content-title">{{item.title}}</h6><span class="content-more">More Info</span>
                       </div>
                     </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item" href="img/item-2.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-2.jpg">
-                      <div class="item-content">
-                        <h6 class="content-title">3D Bag Mockup</h6><span class="content-more">More Info</span>
-                      </div>
-                    </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 design"><a class="portfolio-item" href="img/item-3.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-3.jpg">
-                      <div class="item-content">
-                        <h6 class="content-title">Modern Bag Design</h6><span class="content-more">More Info</span>
-                      </div>
-                    </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 brand"><a class="portfolio-item" href="img/item-4.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-4.jpg">
-                      <div class="item-content">
-                        <h6 class="content-title">Coffee Cup Design</h6><span class="content-more">More Info</span>
-                      </div>
-                    </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 brand"><a class="portfolio-item" href="img/item-5.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-5.jpg">
-                      <div class="item-content">
-                        <h6 class="content-title">T-Shirt Design</h6><span class="content-more">More Info</span>
-                      </div>
-                    </div>
-                  </a></div>
-                <!-- Single item-->
-                <div class="single-item col-6 col-lg-4 photos"><a class="portfolio-item" href="img/item-6.jpg" data-lightbox>
-                    <div class="portfolio-wrapper"><img class="img-fluid" alt="Item" src="img/item-6.jpg">
-                      <div class="item-content">
-                        <h6 class="content-title">Packaging Box Mockup</h6><span class="content-more">More Info</span>
-                      </div>
-                    </div>
-                  </a></div>
+                  </a>
+                </div>
+                {% endfor %}       
               </div>
             </div>
           </div>
