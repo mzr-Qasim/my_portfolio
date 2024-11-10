@@ -15,7 +15,9 @@ class Home(models.Model):
     linkedin_link = models.CharField(max_length=300,null=True,blank=True)
     github_link = models.CharField(max_length=300,null=True,blank=True)
     instagram_link = models.CharField(max_length=300,null=True,blank=True)
+    
     page_title = models.CharField(max_length=50,null=True,blank=True)
+    nav_logo = models.FileField(max_length=200 , upload_to="Nav_Logo/", null=True,blank=True)
 
 
 
