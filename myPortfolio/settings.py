@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    # 'whitenoise.runserver_nostatic',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'Home',
     'About',
@@ -140,8 +140,8 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-MEDIA_ROOT = BASE_DIR / 'media'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 MEDIA_URL = '/media/'
