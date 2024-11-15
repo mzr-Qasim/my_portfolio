@@ -4,7 +4,7 @@ from django.db import models
 class Home(models.Model):
     first_name = models.CharField(max_length=10,null=True,blank=True)
     last_name = models.CharField(max_length=10,null=True,blank=True)
-    photo= models.FileField(max_length=200 , upload_to="Profile_photo", null=True, blank=True)
+    photo= models.FileField(max_length=200 , upload_to="Profile_photo", null=True)
 
     profession_1 = models.CharField(max_length=20,null=True,blank=True)
     profession_2 = models.CharField(max_length=20,null=True,blank=True)

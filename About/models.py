@@ -20,8 +20,8 @@ class About(models.Model):
 
     city = models.CharField(max_length=20,null=True,blank=True)
     country = models.CharField(max_length=20,null=True,blank=True) 
-    cv = models.FileField(upload_to='CV/', null=True, blank=True, validators=[validate_pdf])
-    photo = models.FileField(max_length=200 , upload_to="Profile_photo", null=True,blank=True)
+    cv = models.FileField(upload_to='CV/', null=True, validators=[validate_pdf])
+    photo = models.FileField(max_length=200 , upload_to="Profile_photo", null=True)
 
 
 
