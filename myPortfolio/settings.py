@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['malikqasim.info', 'www.malikqasim.info']
 
-
+ 
 # Application definition
  
 INSTALLED_APPS = [
