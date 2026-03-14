@@ -24,4 +24,4 @@ class Contact(models.Model):
  
     class Meta:
         verbose_name = ""  # Singular name
-        verbose_name_plural = "Contact"  # Plural name (same as singular, to avoid pluralization)
+        verbose_name_plural = "Contact"  # Plural name (same as singular, to avoid pluralization) 
