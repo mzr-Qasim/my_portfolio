@@ -14,7 +14,7 @@ class Contact(models.Model):
             )
         ],
         null=True,
-        blank=True
+        blank=True 
     )
 
 
